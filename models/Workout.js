@@ -18,8 +18,6 @@ const workoutSchema = new Schema({
             },
             name: {
                 type: String,
-                // trim: true,
-                // required: "Exercise type is required"
             },
             duration: {
                 type: Number

@@ -2,12 +2,7 @@
 const router = require('express').Router();
 const path = require('path');
 const mongojs = require('mongojs');
-// const db = require('../../models');
 const { Workout } = require('../../models/index.js');
-
-// router.get('/', (req, res) => {
-//     res.sendFile(path.join(_dirname, "../public/index.html"))
-// });
 
 // get all workouts
 router.get('/workouts', (req, res) => {
@@ -28,6 +23,7 @@ router.get('/workouts', (req, res) => {
       });
   });
 
+// workout range
 router.get("/workouts/range", (req, res) => {
     Workout.aggregate([
         {
@@ -95,40 +91,6 @@ router.put("/workouts/:id", (req, res) => {
         }
     )
 });
-
-// get the range
-// router.get('/workouts/range', (req, res) => {
-//     Workout.aggregate([
-//         {
-//             $addFields: {
-//                 totalDuration: {
-//                     $sum: '$exercises.duration',
-//                 }
-//             }
-//         }
-//     ])
-//     .sort({ _id: -1})
-//     .limit(7)
-//     .then((dbWorkouts) => {
-//         res.json(dbWorkouts);
-//     })
-//     .catch((err) => {
-//         res.json(err)
-//     })
-// });
-
-// get all workouts
-// get api/workouts
-// post api/workouts
-// get one workout
-// api/workouts/:id
-// get ...?
-// api/workouts/range
-// exercise
-
-// router.get('/exercise', (req, res) => {
-//     res.sendFile(path.join(_dirname, "../public/exercise.html"))
-// });
 
 module.exports = router;
 
