@@ -16,15 +16,14 @@ After being given front-end starter code, I created a MongoDB and Mongoose schem
 
 ### Installation Instructions
 To install from GitHub, follow these steps:
-1. Pull the repository.
+1. Pull the [repository](https://github.com/rachelamos/workout-tracker).
 2. Within the terminal, npm install.
 3. Enter 'npm run seed' in the terminal.
 
 ### Usage
 From the terminal, enter 'npm start'.
 
-### Deployement
-[Link to Application](https://github.com/rachelamos/workout-tracker)
+### Deployment
 [Link to Heroku](https://limitless-basin-76792.herokuapp.com/)
 
 ### Questions
